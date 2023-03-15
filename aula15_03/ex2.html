@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercécio 2</title>
+  </head>
+  <body>
+    <h2>Banco XPTO</h2>
+    Insira o saldo de sua conta: <input id="input_saldo" /> <br />
+    Insira o valor que será debitado: <input id="input_debito" /><br />
+    <button onclick="analise()">Analisar conta</button>
+    <p id="p_resposta"></p>
+  </body>
+</html>
+
+<script>
+  function analise() {
+    var saldo = Number(input_saldo.value);
+    var debito = Number(input_debito.value);
+
+    var saldoFinal = saldo - debito;
+
+    if (saldoFinal >= 0) {
+      p_resposta.innerHTML = `<i style = "color: blue;">O saldo atual da conta corrente é R$${saldoFinal}</i>`;
+    } else {
+      p_resposta.innerHTML = `<b style = "color: red;">O saldo da conta corrente é R$${saldoFinal}</b>`;
+    }
+  }
+</script>

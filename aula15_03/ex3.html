@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 3</title>
+  </head>
+  <body>
+    <h2>Mercado BOM DOCE</h2>
+    Digite a quantidade de chocolates comprados:
+    <input id="input_qtdChoco" /><br />
+    <button onclick="auxilio()">Compra</button>
+    <p id="p_resposta"></p>
+  </body>
+</html>
+
+<script>
+  function auxilio() {
+    var qtdChoco = Number(input_qtdChoco.value);
+    var valorChoco = 3;
+    var valorTotal = qtdChoco * valorChoco;
+
+    if (qtdChoco > 12) {
+      valorChoco = 2.5;
+      var valorTotal = qtdChoco * valorChoco;
+      p_resposta.innerHTML = `O valor da sua compra foi de R$${valorTotal}`;
+    } else {
+      p_resposta.innerHTML = `O valor da sua compra foi de R$${valorTotal}`;
+    }
+  }
+</script>
