@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperatura</title>
+  </head>
+  <body>
+    <h2>Como está a temperatura</h2>
+    Informe aqui a temperatura: <input id="input_temp" /><br />
+    <button onclick="temperatura()">clique</button>
+    <p id="p_resposta"></p>
+  </body>
+</html>
+
+<script>
+  function temperatura() {
+    var temp = Number(input_temp.value);
+
+    if (temp < 10) {
+      p_resposta.innerHTML = `Temperatura está muito baixa!`;
+    } else if (temp > 20) {
+      p_resposta.innerHTML = `A temperatura está muito alta!`;
+    } else {
+      p_resposta.innerHTML = `Temperatura ideal!`;
+    }
+  }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h2>Renda Familiar</h2>
+    Informe sua renda familiar mensal: <input id="input_renda"><br>
+    <button onclick="renda()">Analisar renda</button>
+    <p id="p_resposta"></p>
+</body>
+</html>
+
+
+<script>
+    function renda() {
+        var rendaM = Number(input_renda.value)
+
+        if (rendaM > 9500) {
+            p_resposta.innerHTML = `Classe A!`
+        } else if (rendaM > 2500){
+            p_resposta.innerHTML = `Classe B!`
+        } else if(rendaM > 900){
+            p_resposta.innerHTML = `Classe C!`
+        } else if(rendaM > 250) {
+            p_resposta.innerHTML = `Classe D!`
+        } else {
+            p_resposta.innerHTML = `Classe E!`
+        }
+    }
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 3</title>
+  </head>
+  <body>
+    Digite a temperatura: <input id="input_temp" /> <br />
+    <button onclick="analise()">Analisar Temperatura</button>
+    <p id="p_resposta"></p>
+  </body>
+</html>
+
+<script>
+  function analise() {
+    var temperatura = Number(input_temp.value);
+
+    if (temperatura < 14) {
+      p_resposta.innerHTML = `Congelante!`;
+    } else if (temperatura <= 21) {
+      p_resposta.innerHTML = `Com Frio!`;
+    } else if (temperatura <= 24) {
+      p_resposta.innerHTML = `Confortável!`;
+    } else if (temperatura <= 31) {
+      p_resposta.innerHTML = `Com calor!`;
+    } else {
+      p_resposta.innerHTML = `Calor Escaldante!!!`;
+    }
+  }
+</script>
