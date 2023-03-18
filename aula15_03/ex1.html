@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício 1</title>
-</head>
-<body>
-    <h2>Autoescola</h2>
-    Digite seu nome: <input id="input_nome"> <br>
-    Digite sua idade: <input id="input_idade"><br>
-    <button onclick="verificarIdade()">Avaliar aluno</button>
-    <p id="p_resposta"></p>
-</body>
+    <link rel="stylesheet" href="css/ex1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="titulo">
+        <h2>Autoescola</h2>
+      </div>
+      <div class="form">
+          Digite seu nome: <input id="input_nome" /> <br />
+          Digite sua idade: <input id="input_idade" /><br />
+          <button onclick="verificarIdade()" class="botao">Avaliar aluno</button>
+      </div>
+      <p id="p_resposta"></p>
+    </div>
+  </body>
 </html>
 
 <script>
-    function verificarIdade() {
-        var nome = input_nome.value
-        var idade = input_idade.value
+  function verificarIdade() {
+    var nome = input_nome.value;
+    var idade = input_idade.value;
 
-        if (idade >= 18) {
-            p_resposta.innerHTML = `${nome}, vamos tirar a CNH?` 
-        } else {
-            p_resposta.innerHTML = `${nome}, vai jogar PlayStation!`
-        }
+    if (idade >= 18) {
+      p_resposta.innerHTML = `${nome}, vamos tirar a CNH?`;
+    } else {
+      p_resposta.innerHTML = `${nome}, vai jogar PlayStation!`;
     }
+  }
 </script>
