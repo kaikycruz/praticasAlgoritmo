@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 8</title>
+  </head>
+  <body>
+    <h2>Analise de Calorias</h2>
+    Informe quantos pães franceses são comidos diariamente: <input id="input_paes" />
+    <br />
+    Informe quantos pacotes de bolacha recheada come por dia:
+    <input id="input_bolachas" /> <br />
+    informe quantos copos de achocolatado toma por dia:
+    <input id="input_achocolatado" /> <br />
+    <button onclick="calorias()">Verificar calorias</button>
+    <p id="p_resposta"></p>
+  </body>
+</html>
+
+<script>
+  function calorias() {
+    var paes = Number(input_paes.value) * 50;
+    var bolachas = Number(input_bolachas.value) * 80;   
+    var achoc = Number(input_achocolatado.value) * 70;
+
+    var calc = paes + bolachas + achoc;
+
+    if (calc < 200) {
+      p_resposta.innerHTML = `Parabéns, vai sair em forma da quarentena!`;
+    } else if (calc < 400) {
+      p_resposta.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+    } else {
+      p_resposta.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`;
+    }
+  }
+</script>

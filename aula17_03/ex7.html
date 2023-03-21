@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h2>Poder de Compra</h2>
+Digite aqui sua economia: <input id="input_eco"> <br>
+<button onclick="compra()">Poder de compra</button>
+<p id="p_resposta"></p>
+</body>
+</html>
+
+
+
+<script>
+    function compra() {
+        var economia = Number(input_eco.value)
+
+        if (economia <= 0 ) {
+            p_resposta.innerHTML = `Nada de compras!` 
+        } else if (economia < 100) {
+            p_resposta.innerHTML = `Viagem de ida e volta para Praia Grande!`
+        } else if (economia < 4000) {
+            p_resposta.innerHTML = `Viagem de ida e volta para Praia Grande! <br>`
+            p_resposta.innerHTML += `Uma boa moto usada!!!`
+        } else {
+            p_resposta.innerHTML = `Viagem de ida e volta para Praia Grande! <br>`
+            p_resposta.innerHTML += `Uma boa moto usada!! <br>`
+            p_resposta.innerHTML += `Mais alguma bobagem legal!!!`
+        }
+
+    }
+</script>
