@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 4</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Veja a Recomendação</h1>
+      <img
+        src="image/Netflix.png"
+        alt="netflix"
+        style="height: 15vh; width: 15vw"
+      />
+      <div class="textfield">
+        <div class="card">
+          <span>Informe o Horário que Assiste (Apenas Hora):</span>
+          <input type="datetime" id="input_horario" /> <br />
+          <button onclick="recomendado()">Ver Recomendação</button>
+          <p id="p_resposta"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function recomendado() {
+    var hora = Number(input_horario.value);
+
+    if (hora >= 19 && hora <= 21) {
+      p_resposta.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${hora}h!`;
+    } else {
+        p_resposta.innerHTML = `O horário ${hora}h é adequado para assistir sua série favorita!`
+    }
+  }
+</script>

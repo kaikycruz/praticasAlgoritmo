@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 50vh;
+    background: #2bffffde;
+    padding: 35px 30px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 1</title>
+  </head>
+  <body>
+    
+    <div class="main">
+        <h1>Situação da Temperatura</h1>
+      <div class="textfield">
+        <div class="card">
+          <span>Digite a Temperatura (ºC):</span>
+          <input id="input_temp" />
+          <button onclick="temperatura()">Ver Situação</button>
+          <p id="p_resposta"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<script>
+    function temperatura() {
+        var temp = Number(input_temp.value)
+
+        if (temp >= 21 && temp <= 24) {
+            p_resposta.innerHTML = `Temperatura confortável <img src="https://moodle.sptech.school/theme/image.php/degrade/core/1643201436/s/smiley" alt="sorriso">` 
+        } else {
+            p_resposta.innerHTML = `Temperatura DESCONFORTÁVEL <img src="https://moodle.sptech.school/theme/image.php/degrade/core/1643201436/s/sad" alt="triste"> `
+        }
+    }
+</script>
+
+
+

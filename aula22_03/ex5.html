@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 5</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Avaliação de Alunos</h1>
+      <div class="textfield">
+        <div class="card">
+          <span>Informe sua nota:</span>
+          <input id="input_n1" /> <br />
+          <button onclick="avaliar()">Avaliar aluno</button>
+          <p id="p_resposta"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function avaliar() {
+    var n1 = Number(input_n1.value);
+
+    if (n1 >= 0 && n1 <= 10) {
+      if (n1 >= 8.5 && n1 <= 10) {
+        p_resposta.innerHTML = `Aluno Exemplar!`;
+      } else if (n1 >= 6 && n1 < 8.5) {
+        p_resposta.innerHTML = `Aluno comum e aprovado!`;
+      } else {
+        p_resposta.innerHTML = `Aluno reprovado!!!`;
+      }
+    } else {
+      p_resposta.innerHTML = `Insira uma Nota Válida!`;
+    }
+  }
+</script>
