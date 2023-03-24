@@ -5,19 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício 1</title>
-    <link rel="stylesheet" href="css/ex1.css" />
+    <link rel="stylesheet" href="css/ex01.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="titulo">
-        <h2>Autoescola</h2>
+    <div class="main">
+      <div class="left-title">
+        <h1>Autoescola</h1>
+        <img src="imagens/carro.svg" alt="carro" />
       </div>
-      <div class="form">
-          Digite seu nome: <input id="input_nome" /> <br />
-          Digite sua idade: <input id="input_idade" /><br />
-          <button onclick="verificarIdade()" class="botao">Avaliar aluno</button>
-      </div>
-      <p id="p_resposta"></p>
+      <div class="right-question">
+        <div class="card">
+          <h1>Informe os seguintes dados</h1>
+          <div class="textfield">
+            <span> Digite seu nome: </span>
+            <input id="input_nome" class="nome" />
+            <span>Digite sua idade: </span>
+            <input id="input_idade" class="idade" />
+          </div>
+          <button onclick="verificarIdade()" class="botao">
+            Avaliar aluno
+          </button>
+          <p id="p_resposta"></p>
+        </div>
+      </div> 
+      
     </div>
   </body>
 </html>
