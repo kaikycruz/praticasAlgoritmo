@@ -5,35 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício 1</title>
+    <link rel="stylesheet" href="css/ex01.css" />
   </head>
   <body>
-    
     <div class="main">
-        <h1>Situação da Temperatura</h1>
-      <div class="textfield">
-        <div class="card">
-          <span>Digite a Temperatura (ºC):</span>
-          <input id="input_temp" />
-          <button onclick="temperatura()">Ver Situação</button>
-          <p id="p_resposta"></p>
+      <div class="left-title">
+        <h1>
+          Situação da<br />
+          Temperatura
+        </h1>
+        <img src="image/termometro.png" alt="termometro" />
+      </div>
+      <div class="right">
+        <div class="textfield">
+          <div class="card">
+            <h1>Insira os valores pedidos</h1>
+            <span>Digite a Temperatura (ºC):</span>
+            <input id="input_temp" />
+            <button onclick="temperatura()" class="btn-situ">
+              Ver Situação
+            </button>
+            <p id="p_resposta"></p>
+          </div>
         </div>
       </div>
     </div>
   </body>
 </html>
 
-
 <script>
-    function temperatura() {
-        var temp = Number(input_temp.value)
+  function temperatura() {
+    var temp = Number(input_temp.value);
 
-        if (temp >= 21 && temp <= 24) {
-            p_resposta.innerHTML = `Temperatura confortável <img src="https://moodle.sptech.school/theme/image.php/degrade/core/1643201436/s/smiley" alt="sorriso">` 
-        } else {
-            p_resposta.innerHTML = `Temperatura DESCONFORTÁVEL <img src="https://moodle.sptech.school/theme/image.php/degrade/core/1643201436/s/sad" alt="triste"> `
-        }
+    if (temp >= 21 && temp <= 24) {
+      p_resposta.innerHTML = `Temperatura confortável <img src="https://moodle.sptech.school/theme/image.php/degrade/core/1643201436/s/smiley" alt="sorriso">`;
+    } else {
+      p_resposta.innerHTML = `Temperatura DESCONFORTÁVEL <img src="https://moodle.sptech.school/theme/image.php/degrade/core/1643201436/s/sad" alt="triste"> `;
     }
+  }
 </script>
-
-
-
