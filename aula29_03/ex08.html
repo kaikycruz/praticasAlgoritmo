@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 8</title>
+  </head>
+  <body>
+    <span>Insira o nome da Empresa:</span> <br />
+    <input id="input_empresa" /> <br />
+    <span>Insira o valor da bolsa da empresa (R$):</span><br />
+    <input id="input_bolsa" /><br />
+    <span>Insira o valor do VR (R$):</span><br />
+    <input id="input_vr" /><br />
+    <span>Insira o tempo de deslocamento da Empresa para a SPTech (MIN):</span
+    ><br />
+    <input id="input_desloc" /><br />
+    <button onclick="empresa()">É preferida?</button>
+    <p id="p_resposta"></p>
+  </body>
+</html>
+
+<script>
+  function empresa() {
+    var nomeEmpresa = input_empresa.value;
+    var bolsaEmpresa = Number(input_bolsa.value);
+    var vr = Number(input_vr.value);
+    var tempoDesloc = Number(input_desloc.value);
+
+    if (bolsaEmpresa >= 1800 || vr >= 20 || tempoDesloc <= 30) {
+      p_resposta.innerHTML += `A empresa ${nomeEmpresa} é uma de suas preferências!<br>`;
+    } else {
+        p_resposta.innerHTML += `A empresa ${nomeEmpresa} está fora da sua lista!<br>`
+    }
+  }
+</script>

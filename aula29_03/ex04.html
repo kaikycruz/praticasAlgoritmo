@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 4</title>
+    <style>
+      h5 {
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <span>Informe a forma de pagamento:</span> <br />
+    <input id="input_pagamento" />
+    <h5>
+      (Dinheiro = D, Cartão de Débito = CD,<br />Cartão de Crédito = CC, Boleto
+      = B)
+    </h5>
+    <button onclick="analise()">Analisar compra</button>
+    <p id="p_resposta"></p>
+  </body>
+</html>
+
+<script>
+  function analise() {
+    var pagamento = input_pagamento.value;
+
+    if (pagamento == "D" || pagamento == "CD") {
+      p_resposta.innerHTML = `Você terá que pagar a vista!`;
+    } else if (pagamento == "CC" || pagamento == "B") {
+      p_resposta.innerHTML = `Pagamento poderá ser parcelado!`;
+    }
+  }
+</script>
