@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 1</title>
+  </head>
+  <body>
+    <div id="div_image" class="imagem">
+      <img style="width: 500px"
+        src="https://pilbox.themuse.com/image.jpg?filter=antialias&h=385&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2F01212022-1047259374-coding-classes_scanrail.jpg&w=700"
+        alt="code"
+      />
+      <br />
+    </div>
+    <button onclick="aumentar()">Aumentar largura</button>
+    <button onclick="reduzir()">Reduzir largura</button>
+  </body>
+</html>
+
+<script>
+  var largura = 500;
+
+  function aumentar() {
+    largura = largura + 10
+    div_image.innerHTML = `<img style="width: ${largura}px"
+        src="https://pilbox.themuse.com/image.jpg?filter=antialias&h=385&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2F01212022-1047259374-coding-classes_scanrail.jpg&w=700"
+        alt="code"
+      />`
+  }
+  function reduzir() {
+    largura = largura - 10
+    div_image.innerHTML = `<img style="width: ${largura}px"
+        src="https://pilbox.themuse.com/image.jpg?filter=antialias&h=385&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2F01212022-1047259374-coding-classes_scanrail.jpg&w=700"
+        alt="code"
+      />`
+  }
+</script>
