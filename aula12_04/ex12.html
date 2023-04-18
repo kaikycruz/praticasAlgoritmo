@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 12</title>
+  </head>
+  <body>
+    <span>Informe qual tabuada gostaria de ver:</span>
+    <input id="input_tabuada" placeholder="(2 a 9)" /> <br />
+    <span>Até qual número a tabuada terá que seguir</span>
+    <input id="input_final" /><br />
+    <button onclick="tabuada()">Ver Tabuada</button>
+    <div id="div_resposta"></div>
+  </body>
+</html>
+
+<script>
+  function tabuada() {
+    var infoTabuada = Number(input_tabuada.value);
+    var contador = 1;
+    var infoFinal = Number(input_final.value);
+    var resultado = infoTabuada;
+    div_resposta.innerHTML = "";
+
+    while (contador <= infoFinal) {
+      resultado = infoTabuada * contador;
+
+      div_resposta.innerHTML += `${infoTabuada} x ${contador} = ${resultado} <br>`;
+      contador += 1;
+    }
+  }
+</script>

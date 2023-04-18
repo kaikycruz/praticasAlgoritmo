@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <span>Informe o nome da pessoa que você mais ama:</span>
+    <input id="input_pessoa"><br>
+    <span>informe o tamanho do amor:</span>
+    <input id="input_tamanho" placeholder="Num Inteiro"><br>
+    <button onclick="expressar()">Expressar Amor</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+
+<script>
+    function expressar() {
+        var numero = 1;
+        var nome = input_pessoa.value
+        var tamanho = Number(input_tamanho.value)
+        div_resposta.innerHTML = ""
+
+        while (numero <= tamanho) {
+            
+            div_resposta.innerHTML += `${numero}- ${nome}, eu te amo!Sempre lembre disso! <br>`
+            numero += 1
+        }
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+<body>
+    <span>Insira um numero entre (0 e 200):</span>
+    <input type="number" min="0" max="200" id="input_numero"><br>
+    <button onclick="viva7()">Viva o 7!</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+
+<script>
+    function viva7() {
+        var number = Number(input_numero.value)
+        div_resposta.innerHTML = ""
+
+        while(number <= 200) {
+            if (number % 7 == 0) {
+                div_resposta.innerHTML += number + "<br>"
+            }
+            number += 1
+        }
+    }
+</script>

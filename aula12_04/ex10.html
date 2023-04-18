@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <span>Informe o valor 1:</span>
+    <input id="input_valor1"> <br>
+    <span>Informe o valor 2:</span>
+    <input id="input_valor2"> <br>
+    <button onclick="pares()">S2 Pares</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+
+<script>
+    function pares() {
+        var valor2 = Number(input_valor2.value)
+        var contador = Number(input_valor1.value)
+
+        div_resposta.innerHTML = ""
+        while (contador <= valor2) {
+            if (contador % 2 == 0) {
+                div_resposta.innerHTML += contador + "<br>"
+            }
+            contador += 1
+        }
+    }
+</script>

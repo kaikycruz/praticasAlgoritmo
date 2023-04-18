@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 9</title>
+  </head>
+  <body>
+    <span>Insira um valor:</span>
+    <input id="input_valor" /> <br />
+    <span>Digite uma frase:</span>
+    <input id="input_frase" /><br />
+    <button onclick="frases()">Papagaio</button>
+  </body>
+</html>
+
+<script>
+  function frases() {
+    var valor = Number(input_valor.value);
+    var number = 1;
+    var frase = input_frase.value;
+
+    while (number <= valor) {
+      alert(frase);
+      number += 1;
+    }
+  }
+</script>

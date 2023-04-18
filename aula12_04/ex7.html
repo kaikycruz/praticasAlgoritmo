@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <span>Insira um valor entre (20 e 100):</span>
+    <input type="number" min="20" max="100" id="input_numero"><br>
+    <button onclick="multiplos5()">Adoro multiplos de 5</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+
+<script>
+    function multiplos5() {
+        var number = Number(input_numero.value);
+        div_resposta.innerHTML = ""
+
+        while(number <= 100) {
+            if (number % 5 == 0) {
+                div_resposta.innerHTML += number + "<br>"
+            }
+            number += 1
+        }
+    }
+</script>
