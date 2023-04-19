@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 15</title>
+  </head>
+  <body>
+    <span>Informe a quantidade de elefantes:</span>
+    <input id="input_elefantes" /> <br />
+    <button onclick="atazanar()">Atazanar a médium</button>
+    <div id="div_resposta"></div>
+  </body>
+</html>
+
+<script>
+  function atazanar() {
+    var elefantes = Number(input_elefantes.value);
+    var contador_elefantes = 0;
+    var contador = 1;
+    var incomodam = "";
+
+    div_resposta.innerHTML = "";
+
+    while (contador < elefantes) {
+      div_resposta.innerHTML += `1 elefante incomoda muita gente! <br>`;
+
+      while (contador_elefantes <= contador) {
+        incomodam += `incomodam, `;
+        contador_elefantes += 1;
+      }
+      contador += 1;
+      div_resposta.innerHTML += `${contador} elefantes, ${incomodam} muito mais! <br>`;
+    }
+  }
+</script>

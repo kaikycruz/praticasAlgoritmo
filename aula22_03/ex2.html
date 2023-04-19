@@ -12,9 +12,9 @@
       <div class="textfield">
         <div class="card">
           <span>Digite sua Renda (R$):</span>
-          <input id="input_renda" /> <br>
+          <input id="input_renda" /> <br />
           <span>Digite sua renda familiar total (R$):</span>
-          <input id="input_rendaF" /> <br>
+          <input id="input_rendaF" /> <br />
           <button onclick="ajuda()">Verificar ajuda</button>
           <p id="p_resposta"></p>
         </div>
@@ -23,16 +23,15 @@
   </body>
 </html>
 
-
 <script>
-    function ajuda() {
-        var renda = Number(input_renda.value)
-        var rendaFamiliar = Number(input_rendaF.value)
+  function ajuda() {
+    var renda = Number(input_renda.value);
+    var rendaFamiliar = Number(input_rendaF.value);
 
-        if (renda <= 1050 && rendaFamiliar <= 2100) {
-            p_resposta.innerHTML = `Você terá direito!`
-        } else {
-            p_resposta.innerHTML = `Você NÃO terá direito!`
-        }
+    if (renda <= 1050 && rendaFamiliar <= 2100) {
+      p_resposta.innerHTML = `Você terá direito!`;
+    } else {
+      p_resposta.innerHTML = `Você NÃO terá direito!`;
     }
+  }
 </script>

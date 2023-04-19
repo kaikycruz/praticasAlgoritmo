@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+<body>
+    <span>Informe sua Idade:</span>
+    <input id="input_idade"><br>
+    <button onclick="contagem()">Contagem de idade</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+<script>
+    function contagem() {
+        var idade = Number(input_idade.value)
+        contador = 0
+        div_resposta.innerHTML = ""
+
+        while (contador <= idade) {
+            if (contador >= 0 && contador <= 4) {
+                div_resposta.innerHTML += `${contador} anos (Primeira Infância) <br>`
+            } else if (contador > 4 && contador <= 6) {
+                div_resposta.innerHTML += `${contador} anos (Pré-escolar) <br>`
+            } else if (contador > 6 && contador <= 10) {
+                div_resposta.innerHTML += `${contador} anos (Segunda infância) <br>`
+            } else if (contador > 10 && contador <= 18) {
+                div_resposta.innerHTML += `${contador} anos (Adolescência) <br>`
+            } else if (contador > 18 && contador <= 50) {
+                div_resposta.innerHTML += `${contador} anos (Adulto) <br>`
+            } else if (contador > 50 && contador <= 100) {
+                div_resposta.innerHTML += `${contador} anos (Melhor idade) <br>`
+            } else {
+                div_resposta.innerHTML += `${contador} anos (Matusalém) <br>`
+            }
+
+            contador += 1
+        }
+    }
+</script>
