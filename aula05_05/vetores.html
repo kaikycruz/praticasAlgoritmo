@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vetores</title>
+  </head>
+  <body>
+    fruta:<input type="text" id="input_fruta" />
+    <button onclick="adicionar()">Adicionar</button>
+    <div id="div_frutas"></div>
+  </body>
+</html>
+
+<script>
+  var listaFrutas = [];
+
+  function adicionar() {
+    var fruta = input_fruta.value.toUpperCase();
+
+    input_fruta.value = "";
+
+    if (fruta == "") {
+      alert("Insira uma fruta valida");
+    } else if (listaFrutas.indexOf(fruta) > -1) {
+      listaFrutas.push(fruta);
+    } else {
+      alert("Esta fruta ja existe na sua lista!");
+    }
+    // listaFrutas.unshift(fruta) --> colaca a fruta no inicio
+    // coloca a fruta no final
+
+    div_frutas.innerHTML = `
+        Primeira Fruta:  ${listaFrutas[0]}       <br>
+        Ultima Fruta:    ${listaFrutas[listaFrutas.length - 1]}       <br>`;
+
+    var i = 0;
+
+    // while(contador <= listaFrutas - 1)
+    // repetindo = iterando utilizado na variavel como i
+    /*while (i < listaFrutas.length) {
+      var frutaAtual = listaFrutas[i];
+
+      console.log(frutaAtual);
+
+      div_frutas.innerHTML += `${i + 1}.${frutaAtual} <br>`;
+
+      i++;
+    }*/
+
+    for (var i = 0; i < listaFrutas.length; i++) {
+      var frutaAtual = listaFrutas[i];
+
+      console.log(frutaAtual);
+
+      div_frutas.innerHTML += `<div> <b>${i + 1}.${frutaAtual} </div>`;
+    }
+  }
+</script>

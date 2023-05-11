@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var motorista = {
+    nome: "Michael",
+    idade: 21,
+    possuiDeficiencias: false,
+    deficiencias: null,
+    documento: {
+        tipo: "CPF",
+        estado: "SP",
+        pais: "BRASIL",
+        emissor: "SSP/SP",
+        numero: "123.321.334-59"
+    },
+    cnh: {
+        numero: "124.546.956-00",
+        tipo: "B",
+        validade: "2023-09-25"
+    }
+};
+
+
+var placa_carro =  {
+        modelo: "MERCOSUL",
+        pais: "BRASIL",
+        numeracao: "A0H-5677",
+        estado: null,
+        ano: 2018,
+        tipo: "COMUM",
+    };
+
+
+var carro = {
+    quantidadeRodas: 4,
+    cor: "verde",
+    montadora: "GM",
+    modelo: "prisma",
+    tanque: 0,
+    ano: 2025,
+    capacidadeTanque: 250,
+    quantidadePortas: 4,
+    placa: placa_carro,
+    ligar: function() {
+        if (this.ligado == false) {
+            console.log("carro ligando ...");
+            this.ligado = true;
+        } else {
+            console.log("Carro ja ligado ...");
+        }
+    },
+    desligar: function() {
+        if(ligado == true) {
+            console.log("Carro desligando ...");
+            this.ligado = false;
+        } else {
+            console.log("Carro ja desligado");
+            }
+    },
+    abastecer: function(km_total) {
+        var tanqueAbastecido = this.tanque + 50;
+        if(tanqueAbastecido <= this.capacidadeTanque) {
+            this.tanque += 50;
+            console.log("Abasteci o tanque com 50l");
+        } else {
+            console.log("Nao da ! Nao tem espaço")
+        }
+    }
+    
+};
+</script>

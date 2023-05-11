@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 2</title>
+  </head>
+  <body>
+    <h1
+      style="
+        margin: 0;
+        font-weight: 700;
+        font-family: monospace;
+        margin-bottom: 10px;
+      "
+    >
+      Destinos da viagem
+    </h1>
+
+    <input
+      type="text"
+      placeholder="Destino viagem"
+      id="input_destino"
+      style="
+        border: none;
+        outline: none;
+        padding: 10px;
+        color: #000;
+        border-radius: 12px;
+        width: 25%;
+        background: #c5c5c2dd;
+        margin-bottom: 15px;
+      "
+    />
+
+    <button
+      onclick="adicionar()"
+      style="
+        border: none;
+        outline: none;
+        padding: 8px;
+        border-radius: 12px;
+        background: #c5c5c2dd;
+        color: #000;
+        font-weight: 800;
+        cursor: pointer;
+        width: 10%;
+      "
+    >
+      Adicionar
+    </button>
+    <br />
+    <button
+      onclick="primeira()"
+      style="
+        border: none;
+        outline: none;
+        padding: 8px;
+        border-radius: 12px;
+        background: #c5c5c2dd;
+        color: #000;
+        font-weight: 800;
+        cursor: pointer;
+        width: 15%;
+        margin-bottom: 15px;
+      "
+    >
+      Primeira Viagem
+    </button>
+    <button
+      onclick="terceira()"
+      style="
+        border: none;
+        outline: none;
+        padding: 8px;
+        border-radius: 12px;
+        background: #c5c5c2dd;
+        color: #000;
+        font-weight: 800;
+        cursor: pointer;
+        width: 15%;
+      "
+    >
+      Terceira Viagem
+    </button>
+    <button
+      onclick="ultima()"
+      style="
+        border: none;
+        outline: none;
+        padding: 8px;
+        border-radius: 12px;
+        background: #c5c5c2dd;
+        color: #000;
+        font-weight: 800;
+        cursor: pointer;
+        width: 15%;
+      "
+    >
+      Ultima Viagem
+    </button>
+
+    <div id="div_resposta"></div>
+  </body>
+</html>
+
+<script>
+  var destinos = [];
+
+  function adicionar() {
+    var inputDestino = input_destino.value.toLowerCase();
+
+    input_destino.value = "";
+
+    if (inputDestino == "") {
+      div_resposta.innerHTML = ` insiria um destino valido!`;
+    } else {
+      destinos.push(inputDestino);
+    }
+  }
+
+  function primeira() {
+    if (destinos.length == 0) {
+      div_resposta.innerHTML = `Ainda nao viajou!`;
+    } else {
+      div_resposta.innerHTML = `<ul><li>${destinos[0]}</li>`;
+    }
+  }
+
+  function terceira() {
+    if (destinos.length < 3) {
+      div_resposta.innerHTML = `Ainda nao fez a 3º viagem!`;
+    } else {
+      div_resposta.innerHTML = `<li>${destinos[2]}</li>`;
+    }
+  }
+
+  function ultima() {
+    if (destinos.length == 0) {
+      div_resposta.innerHTML = `Ainda nao viajou!`;
+    } else {
+      div_resposta.innerHTML = `<li>${destinos[destinos.length - 1]} </li>`;
+    }
+  }
+  div_resposta.innerHTML += `</ul>`;
+</script>
