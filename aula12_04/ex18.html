@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 18</title>
+</head>
+<body>
+    <span>Informe quantas "coca-cola" acha que já bebeu na vida:</span>
+    <input id="input_qntLatas"> <br>
+    <button onclick="quantidade()">Ver a quantidade</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+
+<script>
+    function quantidade() {
+        var qtdLatas = Number(input_qntLatas.value)
+        var contador = 1
+        div_resposta.innerHTML = ""
+
+        while(contador <= qtdLatas) {
+            div_resposta.innerHTML += `<img style = "width:100px;" src="https://www.kerokery.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/k/kkr-_157-sku-801___bebidas__coca-cola-lata-350ml.jpg" alt="coca">`
+            contador += 1
+        }
+    }
+</script>
