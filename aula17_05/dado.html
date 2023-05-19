@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="jogarDado()">jogar dado</button>
+    <div id="resposta"></div>
+  </body>
+</html>
+
+<script>
+  function jogarDado() {
+    var numerosDado = [1, 2, 3, 4, 5, 6];
+    var numeroAleatorio = parseInt(Math.random() * 6);
+    resposta.innerHTML += `valor: ${numerosDado[numeroAleatorio]} <br>`;
+    //resposta.innerHTML = `valor: ${parseInt(Math.random() * 6) + 1}`;
+  }
+</script>
+
+<!--perguntas = [a, b, c, d, e]
+var perguntasAleatorias = parseInt(math.random)* 5{numero de perguntas})
+perguntas[parseInt(Math.random)*5]
+gera perguntas aleatorias-->
