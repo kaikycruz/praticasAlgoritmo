@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="imagens()">Imagens</button>
+
+    <div id="imagensResposta"></div>
+  </body>
+</html>
+
+<script>
+  var listaImg = [
+    `<img src="https://www.petz.com.br/blog/wp-content/uploads/2021/11/enxoval-para-gato-Copia.jpg" style="width:200px" alt="">`,
+    ` <img src="https://s2.glbimg.com/KqsaFvQjScjVXbRVCKLCqFN-g18=/0x0:4533x3022/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2022/h/F/tT7llhRxKyziUM9FZKuQ/98836479-files-in-this-file-photo-taken-on-june-26-2021-gaya-a-two-and-a-half-year-old-golden-retrie.jpg" style="width:200px" alt="">`,
+    `  <img src="https://www.petz.com.br/blog/wp-content/uploads/2022/05/passaro-tuim-interna-1.jpg" style="width:200px" alt="">`,
+    `<img src="https://blog.cobasi.com.br/wp-content/uploads/2021/05/diferenca-entre-tartaruga-e-jabuti-capa.jpg" style="width:200px" alt="">`,
+    `<img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3076881:1621519209/shih-tzu.jpg?f=16x9&h=720&q=0.8&w=1280&$p$f$h$q$w=1a0f04b" style="width:200px" alt="">`,
+  ];
+  imagensResposta.innerHTML = "";
+  function imagens() {
+    var aleatoria = parseInt(Math.random() * listaImg.length);
+    if (listaImg == 0) {
+      imagensResposta.innerHTML = "";
+      alert("lista vazia");
+    } else {
+      imagensResposta.innerHTML = `${listaImg.splice(aleatoria, 1)} <br>`;
+    }
+
+    /*var aleatoria = parseInt(Math.random() * 5);
+    imagensResposta.innerHTML = `${listaImg[aleatoria]}`;*/
+  }
+</script>

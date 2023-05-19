@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercico 2</title>
+  </head>
+  <body>
+    <span>Valor Minimo:</span>
+    <input id="inputMinimo" /> <br />
+    <span>Valor Maximo:</span>
+    <input id="inputMaximo" /> <br />
+    <button onclick="sorteio()">Sortear</button>
+    <div id="resposta"></div>
+  </body>
+</html>
+
+<script>
+  var listaValores = [10, 11, 12, 13, 14, 15];
+
+  function sorteio() {
+    var min = Number(inputMinimo.value);
+    var max = Number(inputMaximo.value);
+
+    var sort = parseInt(Math.random() * max + min);
+
+    for (var i = 0; i < listaValores.length; i++) {
+      resposta.innerHTML;
+      if (sort == listaValores[i]) {
+      }
+    }
+
+    if (listaValores.indexOf(sort) >= 0) {
+      resposta.innerHTML = `<h4>Parabens! O numero ${sort} esta na posicao ${listaValores.length[sort]} da nossa lista.</h4>`;
+    } else {
+      resposta.innerHTML = `<h3>${sort}</h3>`;
+    }
+  }
+</script>
+
+<!--if (listaValores.indexOf(sort) > 0) {
+    for (var i = 0; i <= listaValores; i++) {
+      resposta.innerHTML = `<h4>Parabens! O numero ${sort} esta na posicao ${
+        listaValores.length[i - 1]
+      } da nossa lista.</h4>`;
+    }
+  } else {
+    resposta.innerHTML = `<h3>${sort}</h3>`;
+  }-->
