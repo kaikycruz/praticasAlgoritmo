@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 9</title>
+  </head>
+  <body>
+    Informe o nome de seus projetos: <input id="input_projetos" /><br />
+    <button onclick="registrar()">Registrar projeto</button>
+    <button onclick="mostrar()">Mostrar projetos</button>
+    <div id="resposta"></div>
+  </body>
+</html>
+
+<script>
+  var projetos = [];
+  var projetosInverso = [];
+  var projetinhos = "";
+
+  function registrar() {
+    projetinhos = input_projetos.value;
+    projetos.push(projetinhos);
+    projetosInverso.unshift(projetinhos);
+
+    resposta.innerHTML = `Voce ja fez ${projetos.length}<br>`;
+
+    if (projetos.length <= 4) {
+      resposta.innerHTML += `Por isso voce e um profissional Junior <br>`;
+    } else if (projetos.length > 4 && projetos.length <= 12) {
+      resposta.innerHTML += `Por isso voce e um profissional Pleno, desde o projeto ${projetos[4]} <br>`;
+    } else {
+      resposta.innerHTML += `Por isso voce e um profissional Senior, desde o projeto ${projetos[12]} <br>`;
+    }
+  }
+
+  function mostrar() {
+    for (var i = 0; i < projetosInverso.length; i++) {
+      resposta.innerHTML += `${projetosInverso[i]}<br>`;
+    }
+  }
+</script>

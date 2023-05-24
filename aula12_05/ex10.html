@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercico 10</title>
+  </head>
+  <body>
+    <ul style="list-style: none">
+      <li></li>
+    </ul>
+    Nome das linhas: <input id="input_linhas" />
+    <button onclick="gravar()">Gravar buzao</button>
+    <button onclick="mostrar()">Mostrar Lista</button><br />
+    pesquisar linhas: <input id="input_pesquisar" />
+    <button onclick="pesquisar()">Pesquisar</button>
+
+    <div id="resposta"></div>
+  </body>
+</html>
+
+<script>
+  var buzoes = [];
+  var linhas = "";
+
+  function gravar() {
+    linhas = input_linhas.value;
+    input_linhas.value = "";
+    buzoes.unshift(linhas);
+  }
+
+  function mostrar() {
+    for (var i = 0; i < buzoes.length; i++) {
+      resposta.innerHTML += `<ul style="list-style: none;"><li>${buzoes[i]}</li></ul>`;
+    }
+  }
+</script>

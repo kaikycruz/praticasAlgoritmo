@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecercicio 7</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 7</title>
+  </head>
+  <body>
+    <input id="input_filme" />
+    <button onclick="verFilmes()">Cadastrar</button>
+    <div id="resposta"></div>
+  </body>
 </html>
+
+<script>
+  var listaDeFilmes = [];
+  var i = 0;
+
+  function verFilmes() {
+    var filmeUsuario = input_filme.value;
+    listaDeFilmes.push(filmeUsuario);
+
+    for (i; i < listaDeFilmes.length; i++) {
+      if (i % 2 == 0) {
+        resposta.innerHTML += `<ul><li style="color:blue">${listaDeFilmes[i]}</li>`;
+      } else {
+        resposta.innerHTML += `<ul><li style="color:red">${listaDeFilmes[i]}</li>`;
+      }
+    }
+
+    resposta.innerHTML += `</ul`;
+  }
+</script>
